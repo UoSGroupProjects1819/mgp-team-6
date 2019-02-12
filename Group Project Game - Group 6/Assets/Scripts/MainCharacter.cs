@@ -6,7 +6,8 @@ public class MainCharacter : MonoBehaviour {
 
 	public float speed = 1;
 
-    void Update() {
-        GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+	private void FixedUpdate() {
+		transform.position = Vector2.MoveTowards(transform.position, transform.position + transform.right, speed * Time.fixedDeltaTime);
 	}
 }
+
