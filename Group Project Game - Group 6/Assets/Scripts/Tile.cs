@@ -57,6 +57,6 @@ public class Tile : MonoBehaviour{
 	}
 
 	private void Update() {
-		transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position, target, 5 * Time.deltaTime);
 	}
 }
