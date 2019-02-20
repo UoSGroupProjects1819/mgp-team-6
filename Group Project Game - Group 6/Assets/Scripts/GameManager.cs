@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	private void Update() {
+
 		if (Input.GetKeyDown("1")) {
 			abilityMode = 0;
 			print("Move");
@@ -27,4 +28,6 @@ public class GameManager : MonoBehaviour
 	public void GameOver() {
 		deathScreen.SetActive(true);
 	}
+
+
 }

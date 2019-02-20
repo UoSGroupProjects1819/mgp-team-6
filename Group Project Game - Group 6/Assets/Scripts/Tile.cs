@@ -84,8 +84,10 @@ public class Tile : MonoBehaviour{
 		//Subtract mana
 		gameManager.mana -= 100;
 		gameManager.manaText.text = gameManager.mana.ToString();
+
 		direction *= 2;
 		direction = new Vector2(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
+
 		//Scale in that direction
 		transform.localScale = (Vector2)transform.localScale + direction;
 		moved = true;
