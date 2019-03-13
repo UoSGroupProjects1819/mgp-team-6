@@ -6,12 +6,14 @@ public class Tile : MonoBehaviour{
 
 	private GameManager gameManager;
 	private Vector3 target;
+    private Vector3 startPos;
 	private bool moved;
 	public bool movable = true;
 
 	private void Start() {
 		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 		target = transform.position;
+        startPos = transform.position;
 	}
 
 	void OnMouseOver() {
@@ -22,7 +24,12 @@ public class Tile : MonoBehaviour{
 				StartCoroutine(ScaleTile());
 			}
 		}
-	}
+
+        if ((Input.GetMouseButtonDown(0) && moved)) {
+            StartCoroutine(MoveTileBack());
+        }
+
+    }
 
 	IEnumerator MoveTile() {
 		//Wait for the player to release mouse
@@ -59,6 +66,27 @@ public class Tile : MonoBehaviour{
 		moved = false;
 		target = (Vector2)transform.position - direction;
 	}
+
+    IEnumerator MoveTileBack()
+    {
+        //Wait for the player to release mouse
+        yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+
+        //Get where mouse is
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        //Figure out what direction from the block it is
+        Vector2 heading = mousePos - (Vector2)transform.position;
+        Vector2 direction = heading / heading.magnitude;
+        direction = new Vector2(Mathf.Round(direction.x), Mathf.Round(direction.y));
+
+        if (transform.position + (Vector3)direction == startPos) {
+            StopAllCoroutines();
+            target = (Vector2)transform.position + direction;
+            moved = false;
+        }
+
+    }
 
 	IEnumerator ScaleTile() {
 		//Wait for the player to release mouse
