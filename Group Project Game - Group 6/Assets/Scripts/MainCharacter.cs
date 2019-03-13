@@ -29,6 +29,10 @@ public class MainCharacter : MonoBehaviour {
 			GetComponent<SpriteRenderer>().enabled = false;
 
 		}
-	}
+        if (transform.InverseTransformPoint(collision.transform.position).y > 0)
+        {
+            direction *= -1;
+        }
+    }
 }
 
