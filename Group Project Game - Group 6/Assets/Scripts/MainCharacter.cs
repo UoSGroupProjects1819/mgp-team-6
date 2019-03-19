@@ -24,15 +24,18 @@ public class MainCharacter : MonoBehaviour {
 
 	private void OnCollisionStay2D(Collision2D collision) {
 		if (collision.collider.bounds.Contains(transform.position)) {
-			gameManager.GameOver();
-			Time.timeScale = 0;
-			GetComponent<SpriteRenderer>().enabled = false;
-
+			Die();
 		}
         if (transform.InverseTransformPoint(collision.transform.position).y > 0)
         {
             direction *= -1;
         }
     }
+
+	public void Die() {
+		gameManager.GameOver();
+		Time.timeScale = 0;
+		GetComponent<SpriteRenderer>().enabled = false;
+	}
 }
 
