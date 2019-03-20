@@ -16,20 +16,22 @@ public class MainCharacter : MonoBehaviour {
 		transform.position = Vector2.MoveTowards(transform.position, transform.position + direction, speed * Time.fixedDeltaTime);
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision) {
-		if (transform.InverseTransformPoint(collision.transform.position).y > 0) {
-			direction *= -1;
-		}
-	}
+
 
 	private void OnCollisionStay2D(Collision2D collision) {
 		if (collision.collider.bounds.Contains(transform.position)) {
 			Die();
 		}
-        if (transform.InverseTransformPoint(collision.transform.position).y > 0)
-        {
+        if (transform.InverseTransformPoint(collision.transform.position).y > 0) {
             direction *= -1;
-        }
+			GetComponent<Animator>().Play("FlipAnimation");
+			SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
+			if (spriteR.flipX) {
+				spriteR.flipX = false;
+			} else {
+				spriteR.flipX = true;
+			}
+		}
     }
 
 	public void Die() {
