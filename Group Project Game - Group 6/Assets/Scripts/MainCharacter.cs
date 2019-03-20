@@ -19,7 +19,7 @@ public class MainCharacter : MonoBehaviour {
 
 
 	private void OnCollisionStay2D(Collision2D collision) {
-		if (collision.collider.bounds.Contains(transform.position)) {
+		if (collision.collider.bounds.Contains(transform.GetComponent<Renderer>().bounds.center)) {
 			Die();
 		}
         if (transform.InverseTransformPoint(collision.transform.position).y > 0) {
