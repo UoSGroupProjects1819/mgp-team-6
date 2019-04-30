@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-	public int mana = 500;
-	public Text manaText;
+	public int collectibles;
+	public Text collectiblesText;
 	public GameObject deathScreen;
 	public int abilityMode;
-
-	void Start() {
-		manaText.text = mana.ToString();
-	}
 
 	private void Update() {
 

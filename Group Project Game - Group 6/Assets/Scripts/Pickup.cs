@@ -9,8 +9,8 @@ public class Pickup : MonoBehaviour
 		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	private void OnTriggerEnter2D(Collider2D collision) {
-		gameManager.mana += 500;
-		gameManager.manaText.text = gameManager.mana.ToString();
+		gameManager.collectibles += 1;
+		gameManager.collectiblesText.text = gameManager.collectibles.ToString();
 		Destroy(gameObject);
 	}
 }

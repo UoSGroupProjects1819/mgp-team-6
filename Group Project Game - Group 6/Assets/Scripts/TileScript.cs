@@ -17,7 +17,7 @@ public class TileScript : MonoBehaviour{
 	}
 
 	void OnMouseOver() {
-		if (Input.GetMouseButtonDown(0) && !moved && gameManager.mana >= 100 && movable) {
+		if (Input.GetMouseButtonDown(0) && !moved && movable) {
 			if (gameManager.abilityMode == 0) {
 				StartCoroutine(MoveTile());
 			} else if (gameManager.abilityMode == 1) {
@@ -51,10 +51,6 @@ public class TileScript : MonoBehaviour{
 				direction = new Vector2(direction.x, 0);
 			}
 		}
-
-		//Subtract mana
-		gameManager.mana -= 100;
-		gameManager.manaText.text = gameManager.mana.ToString();
 
 		//Move in that direction
 		target = (Vector2)transform.position + direction;
@@ -108,10 +104,6 @@ public class TileScript : MonoBehaviour{
 				direction = new Vector2(direction.x, 0);
 			}
 		}
-
-		//Subtract mana
-		gameManager.mana -= 100;
-		gameManager.manaText.text = gameManager.mana.ToString();
 
 		direction *= 2;
 		direction = new Vector2(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
