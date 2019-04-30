@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 	public int collectibles;
 	public Text collectiblesText;
 	public GameObject deathScreen;
+	public GameObject winScreen;
 	public int abilityMode;
 
 	private void Update() {
@@ -23,6 +24,10 @@ public class GameManager : MonoBehaviour
 
 	public void GameOver() {
 		deathScreen.SetActive(true);
+	}
+
+	public void Win() {
+		winScreen.SetActive(true);
 	}
 
 

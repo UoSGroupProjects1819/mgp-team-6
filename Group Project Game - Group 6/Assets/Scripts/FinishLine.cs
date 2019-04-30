@@ -7,8 +7,11 @@ using UnityEditor;
 public class FinishLine : MonoBehaviour
 {
 	public SceneAsset nextScene;
+	public GameManager gameManager;
 
 	private void OnCollisionEnter2D(Collision2D collision) {
-		SceneManager.LoadScene(nextScene.name);
+		gameManager.Win();
+		Time.timeScale = 0;
+		collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 	}
 }
