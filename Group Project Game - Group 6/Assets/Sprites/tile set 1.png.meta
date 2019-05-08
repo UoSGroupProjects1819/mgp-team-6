@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: 30d77ba1a5bc41e4aa5a4881e2be5fe0
+guid: cfbe975af6315e549b421be49a8e4a44
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6633019797640734440
-    second: MV_collectibleAnimation_0
+      213: 4722562319169559652
+    second: tile set 1_0
   - first:
-      213: 6483696201217131507
-    second: MV_collectibleAnimation_1
+      213: 2214362734186826470
+    second: tile set 1_1
   - first:
-      213: -8240599725933721179
-    second: MV_collectibleAnimation_2
+      213: -3825152592093632360
+    second: tile set 1_2
   - first:
-      213: 4383217868859143500
-    second: MV_collectibleAnimation_3
+      213: -680265888762204574
+    second: tile set 1_3
   - first:
-      213: -3957662248465828801
-    second: MV_collectibleAnimation_4
+      213: -3453516485159190032
+    second: tile set 1_4
   - first:
-      213: 5504324748572531542
-    second: MV_collectibleAnimation_5
+      213: 3015240627320646224
+    second: tile set 1_5
   - first:
-      213: 2007884908822793821
-    second: MV_collectibleAnimation_6
+      213: 8333946145744809547
+    second: tile set 1_6
   - first:
-      213: 8083700958648472305
-    second: MV_collectibleAnimation_7
+      213: -3723001822949795582
+    second: tile set 1_7
+  - first:
+      213: -8483129424532792002
+    second: tile set 1_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -108,169 +111,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MV_collectibleAnimation_0
+      name: tile set 1_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 123
-        width: 37
-        height: 37
+        x: 0
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc32005d016bb9468d4f0dfc0388c84
-      internalID: 6633019797640734440
+      spriteID: 69d3ef9b8dcf3174594dd3747003e7c7
+      internalID: 4722562319169559652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MV_collectibleAnimation_1
+      name: tile set 1_1
       rect:
         serializedVersion: 2
-        x: 119
-        y: 113
-        width: 57
-        height: 57
+        x: 100
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04c6022f3ddc31a4fadb3f332b9b82a9
-      internalID: 6483696201217131507
+      spriteID: dfb30ab159b4eb341809b90730ac1a4e
+      internalID: 2214362734186826470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MV_collectibleAnimation_2
+      name: tile set 1_2
       rect:
         serializedVersion: 2
-        x: 206
-        y: 110
-        width: 64
-        height: 64
+        x: 200
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a09ef08da878d4488c2ab3c0705e14a
-      internalID: -8240599725933721179
+      spriteID: 71d9b095e584fda4bb59b1b2abb322cf
+      internalID: -3825152592093632360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MV_collectibleAnimation_3
+      name: tile set 1_3
       rect:
         serializedVersion: 2
-        x: 292
-        y: 105
-        width: 74
-        height: 74
+        x: 0
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e88bdc22263fd4c828f0228ceaa145
-      internalID: 4383217868859143500
+      spriteID: f23a6fdc0cac2dc4b8e575fe3fa4d38e
+      internalID: -680265888762204574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MV_collectibleAnimation_4
+      name: tile set 1_4
       rect:
         serializedVersion: 2
-        x: 21
-        y: 28
-        width: 64
-        height: 64
+        x: 100
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ace5339b3f79f74ab3ecfed54483891
-      internalID: -3957662248465828801
+      spriteID: 660293aa245692d4bb0ecdeb9b89bb41
+      internalID: -3453516485159190032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MV_collectibleAnimation_5
+      name: tile set 1_5
       rect:
         serializedVersion: 2
-        x: 108
-        y: 24
-        width: 74
-        height: 74
-      alignment: 9
-      pivot: {x: 0.53014785, y: 0.48495433}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2551f47a9b59a2643b631390f891074d
-      internalID: 5504324748572531542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MV_collectibleAnimation_6
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 28
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5054114, y: 0.49999976}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1914c20bf401f5b46a0c07fc01a70f18
-      internalID: 2007884908822793821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MV_collectibleAnimation_7
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 31
-        width: 57
-        height: 57
+        x: 200
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aa3c8d54a0b6164aa92b4e916af35b7
-      internalID: 8083700958648472305
+      spriteID: 4a88eb138f46dfe489734c84a8166a15
+      internalID: 3015240627320646224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile set 1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50944b3fee75e34794dd234fbb0264a
+      internalID: 8333946145744809547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile set 1_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b3819f353d0dc45bef68741df329cb
+      internalID: -3723001822949795582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile set 1_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d9b828cf316404087a4624e81e0dac
+      internalID: -8483129424532792002
       vertices: []
       indices: 
       edges: []
@@ -278,7 +302,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a5dbdedce4da8eb40857cd5015265171
+    spriteID: 32493b4cb253c5c44a22bb4eb4820779
     internalID: 0
     vertices: []
     indices: 
