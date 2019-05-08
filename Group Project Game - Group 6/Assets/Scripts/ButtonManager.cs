@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 
 public class ButtonManager : MonoBehaviour {
 	public void ReplayButton() {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		Time.timeScale = 1;
 	}
-	public void NextLevel(SceneAsset nextScene) {
-		SceneManager.LoadScene(nextScene.name);
+	public void NextLevel(string sceneName) {
+		SceneManager.LoadScene(sceneName);
 		Time.timeScale = 1;
 	}
-	public void MainMenuButton(SceneAsset nextScene) {
-		SceneManager.LoadScene(nextScene.name);
+	public void MainMenuButton(string sceneName) {
+		SceneManager.LoadScene(sceneName);
 	}
 	public void Quit() {
 		Application.Quit();

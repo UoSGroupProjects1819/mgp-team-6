@@ -20217,14 +20217,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1618608434}
         m_MethodName: NextLevel
-        m_Mode: 2
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 102900000, guid: aa33935f2bc4f4a49ba696c949232371,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEditor.SceneAsset, UnityEditor
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 2
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -52112,7 +52111,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3453516485159190032, guid: cfbe975af6315e549b421be49a8e4a44,
+      objectReference: {fileID: 2214362734186826470, guid: cfbe975af6315e549b421be49a8e4a44,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc29524abbeb53c489cbd71de7012069, type: 3}
@@ -68453,7 +68452,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nextScene
       value: 
-      objectReference: {fileID: 102900000, guid: aa33935f2bc4f4a49ba696c949232371,
+      objectReference: {fileID: 102900000, guid: b6c78b433b5fff0428a5d6251d079c99,
         type: 3}
     - target: {fileID: 5535644141171979233, guid: af6ebe43a9c9fa247abdb7c6f9ee2a03,
         type: 3}

@@ -6,7 +6,6 @@ using UnityEditor;
 
 public class FinishLine : MonoBehaviour
 {
-	public SceneAsset nextScene;
 	public GameManager gameManager;
 
 	private void OnCollisionEnter2D(Collision2D collision) {
