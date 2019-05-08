@@ -13,4 +13,10 @@ public class ButtonManager : MonoBehaviour {
 		SceneManager.LoadScene(nextScene.name);
 		Time.timeScale = 1;
 	}
+	public void MainMenuButton(SceneAsset nextScene) {
+		SceneManager.LoadScene(nextScene.name);
+	}
+	public void Quit() {
+		Application.Quit();
+	}
 }
