@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +5,7 @@
     <title>The Groupest group of all times - project-work</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+
     <style>
         /* === GENERAL === */
 
@@ -27,9 +26,18 @@ img {
     object-fit: contain;
 }
 
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
 .pre {
     font-family: "Consolas", "Courier New", Courier, Monospace;
-    white-space: pre-wrap;
 }
 
 .pre--multiline {
@@ -44,25 +52,25 @@ img {
     border-radius: 3px;
 }
 
+.mention {
+    font-weight: 500;
+}
+
 .emoji {
-    width: 24px;
-    height: 24px;
+    width: 1.45em;
+    height: 1.45em;
     margin: 0 1px;
-    vertical-align: middle;
+    vertical-align: -0.4em;
 }
 
 .emoji--small {
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
 }
 
 .emoji--large {
-    width: 32px;
-    height: 32px;
-}
-
-.mention {
-    font-weight: 600;
+    width: 2rem;
+    height: 2rem;
 }
 
 /* === INFO === */
@@ -111,6 +119,7 @@ img {
 
 .chatlog {
     max-width: 100%;
+    margin-bottom: 24px;
 }
 
 .chatlog__message-group {
@@ -140,6 +149,7 @@ img {
 
 .chatlog__author-name {
     font-size: 1em;
+    font-weight: 500;
 }
 
 .chatlog__timestamp {
@@ -154,7 +164,7 @@ img {
 }
 
 .chatlog__edited-timestamp {
-    margin-left: 5px;
+    margin-left: 3px;
     font-size: .8em;
 }
 
@@ -293,42 +303,46 @@ img {
 }
 
 .chatlog__reactions {
-    display: flex;    
+    display: flex;
 }
 
 .chatlog__reaction {
+    display: flex;
+    align-items: center;
     margin: 6px 2px 2px 2px;
-    padding: 2px 6px 2px 2px;
+    padding: 3px 6px;
     border-radius: 3px;
 }
 
-.chatlog__reaction-emoji {
-    margin-left: 3px;
-    vertical-align: middle;
-}
-
 .chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
     font-size: .875em;
-    vertical-align: middle;
 }
-/* === GENERAL === */
+    </style>
+    <style>
+        /* === GENERAL === */
 
 body {
     background-color: #ffffff;
-    color: #737f8d;
+    color: #747f8d;
 }
 
 a {
     color: #00b0f4;
 }
 
+.spoiler {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .pre {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9 !important;
 }
 
 .pre--multiline {
-    border-color: #f3f3f3;
-    color: #657b83;
+    border-color: #f3f3f3 !important;
+    color: #657b83 !important;
 }
 
 .mention {
@@ -369,8 +383,8 @@ a {
 }
 
 .chatlog__embed-content-container {
-    background-color: #f9f9f94d;
-    border-color: #cccccc4d;
+    background-color: rgba(249, 249, 249, 0.3);
+    border-color: rgba(204, 204, 204, 0.3);
 }
 
 .chatlog__embed-author-name {
@@ -398,17 +412,27 @@ a {
 }
 
 .chatlog__embed-footer {
-    color: #4f535b99;
+    color: rgba(79, 83, 91, 0.4);
 }
 
 .chatlog__reaction {
-    background-color: #4f545c0f;
+    background-color: rgba(79, 84, 92, 0.06);
 }
 
 .chatlog__reaction-count {
     color: #99aab5;
 }
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
 </head>
 <body>
     
@@ -437,21 +461,24 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:45 AM</span>
 
                         <div class="chatlog__content">
-                            since no one is really saying anything I will put an idea here. <br />Dungeon, monster slaying game.. one of the main mechanics is killing monsters, right? So we could be a guy who goes into a dungeon not killing but helping those monsters somehow.<br /><br />Any ideas?
+                            <span class="markdown">since no one is really saying anything I will put an idea here. 
+Dungeon, monster slaying game.. one of the main mechanics is killing monsters, right? So we could be a guy who goes into a dungeon not killing but helping those monsters somehow.
+
+Any ideas?</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            &#128515;
+                            <span class="markdown"><img class="emoji emoji--large" alt="😃" title="😃" src="https://twemoji.maxcdn.com/2/72x72/1f603.png" /></span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            You can put your ideas there too. So we can agree on something and move somewhere other than silence ♥
+                            <span class="markdown">You can put your ideas there too. So we can agree on something and move somewhere other than silence <img class="emoji " alt="♥" title="♥" src="https://twemoji.maxcdn.com/2/72x72/2665.png" /></span>
 
                         </div>
 
@@ -468,7 +495,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:47 AM</span>
 
                         <div class="chatlog__content">
-                            That sounds awesome
+                            <span class="markdown">That sounds awesome</span>
 
                         </div>
 
@@ -485,14 +512,14 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:47 AM</span>
 
                         <div class="chatlog__content">
-                            But do we know if that is possible
+                            <span class="markdown">But do we know if that is possible</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            First we could have a prototype of some kind to have an understanding of the core mechanic
+                            <span class="markdown">First we could have a prototype of some kind to have an understanding of the core mechanic</span>
 
                         </div>
 
@@ -509,7 +536,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:48 AM</span>
 
                         <div class="chatlog__content">
-                            I was thinking about a 2d platformer where the player is a spider who moves using his web, so using the web would have been the main mechanic
+                            <span class="markdown">I was thinking about a 2d platformer where the player is a spider who moves using his web, so using the web would have been the main mechanic</span>
 
                         </div>
 
@@ -526,7 +553,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:49 AM</span>
 
                         <div class="chatlog__content">
-                            That is a more concise plan
+                            <span class="markdown">That is a more concise plan</span>
 
                         </div>
 
@@ -543,7 +570,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:49 AM</span>
 
                         <div class="chatlog__content">
-                            That sound really nice, thank you <span class="mention" title="bubul99#4645">@bubul99</span>
+                            <span class="markdown">That sound really nice, thank you <span class="mention" title="bubul99#4645">@bubul99</span></span>
 
                         </div>
 
@@ -560,7 +587,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:52 AM</span>
 
                         <div class="chatlog__content">
-                            But the dungeon thingy is more interesting than the spider i guess
+                            <span class="markdown">But the dungeon thingy is more interesting than the spider i guess</span>
 
                         </div>
 
@@ -577,7 +604,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:53 AM</span>
 
                         <div class="chatlog__content">
-                            We can do spider in dungeon wooo
+                            <span class="markdown">We can do spider in dungeon wooo</span>
 
                         </div>
 
@@ -594,14 +621,14 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:53 AM</span>
 
                         <div class="chatlog__content">
-                            The dungeon has a theme but no main mechanic
+                            <span class="markdown">The dungeon has a theme but no main mechanic</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            oh that could be an idea
+                            <span class="markdown">oh that could be an idea</span>
 
                         </div>
 
@@ -618,7 +645,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:53 AM</span>
 
                         <div class="chatlog__content">
-                            Suggest mechanic then
+                            <span class="markdown">Suggest mechanic then</span>
 
                         </div>
 
@@ -635,14 +662,14 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:53 AM</span>
 
                         <div class="chatlog__content">
-                            well like you said combining the two ideas
+                            <span class="markdown">well like you said combining the two ideas</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            using the web as a mechanic to manoeuvre around the level
+                            <span class="markdown">using the web as a mechanic to manoeuvre around the level</span>
 
                         </div>
 
@@ -659,7 +686,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:54 AM</span>
 
                         <div class="chatlog__content">
-                            Combining the ideas might dilute the focus a bit
+                            <span class="markdown">Combining the ideas might dilute the focus a bit</span>
 
                         </div>
 
@@ -676,7 +703,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:54 AM</span>
 
                         <div class="chatlog__content">
-                            True
+                            <span class="markdown">True</span>
 
                         </div>
 
@@ -693,7 +720,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:54 AM</span>
 
                         <div class="chatlog__content">
-                            Yea true
+                            <span class="markdown">Yea true</span>
 
                         </div>
 
@@ -710,42 +737,42 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 11:55 AM</span>
 
                         <div class="chatlog__content">
-                            But a main mechanic is the most important aspect of how we can progress with the games design
+                            <span class="markdown">But a main mechanic is the most important aspect of how we can progress with the games design</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            We have a lot of freedom with this years group project
+                            <span class="markdown">We have a lot of freedom with this years group project</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            So maybe we could put out ideas that contain singular mechanics that allows the player to progress in the game
+                            <span class="markdown">So maybe we could put out ideas that contain singular mechanics that allows the player to progress in the game</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            I mean they use snake pass as an example, which focuses on the movement of the snake as the core mechanic
+                            <span class="markdown">I mean they use snake pass as an example, which focuses on the movement of the snake as the core mechanic</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            I think using movement as a basis for the core/main mechanic would be an excellent start
+                            <span class="markdown">I think using movement as a basis for the core/main mechanic would be an excellent start</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            So for example <span class="mention" title="bubul99#4645">@bubul99</span> web slinging mechanic idea
+                            <span class="markdown">So for example <span class="mention" title="bubul99#4645">@bubul99</span> web slinging mechanic idea</span>
 
                         </div>
 
@@ -762,7 +789,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:00 PM</span>
 
                         <div class="chatlog__content">
-                            Yeah that s what i had in mind when i came with the web
+                            <span class="markdown">Yeah that s what i had in mind when i came with the web</span>
 
                         </div>
 
@@ -779,21 +806,21 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:00 PM</span>
 
                         <div class="chatlog__content">
-                            ah good
+                            <span class="markdown">ah good</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            i mean obviously we can&#39;t just come up with one idea and just run with that
+                            <span class="markdown">i mean obviously we can&#39;t just come up with one idea and just run with that</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            we may need to have at least 4 or 5 more mechanic based ideas, and try and conjure up something more concise
+                            <span class="markdown">we may need to have at least 4 or 5 more mechanic based ideas, and try and conjure up something more concise</span>
 
                         </div>
 
@@ -810,7 +837,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:02 PM</span>
 
                         <div class="chatlog__content">
-                            What other genres are there we could modify?
+                            <span class="markdown">What other genres are there we could modify?</span>
 
                         </div>
 
@@ -827,42 +854,42 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:03 PM</span>
 
                         <div class="chatlog__content">
-                            Not that many i don&#39;t think
+                            <span class="markdown">Not that many i don&#39;t think</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            like we cannot touch any rts&#39;s or strategy games as that will kill us
+                            <span class="markdown">like we cannot touch any rts&#39;s or strategy games as that will kill us</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            but something like platformers, and...
+                            <span class="markdown">but something like platformers, and...</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            I dunno
+                            <span class="markdown">I dunno</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            bullet hells?
+                            <span class="markdown">bullet hells?</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            RPG&#39;s are also a bit insane as well
+                            <span class="markdown">RPG&#39;s are also a bit insane as well</span>
 
                         </div>
 
@@ -879,7 +906,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:05 PM</span>
 
                         <div class="chatlog__content">
-                            An RTS or strategy game could be done so long as we kept it small and simple
+                            <span class="markdown">An RTS or strategy game could be done so long as we kept it small and simple</span>
 
                         </div>
 
@@ -896,21 +923,21 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:06 PM</span>
 
                         <div class="chatlog__content">
-                            yes but by design they cannot be simple and small
+                            <span class="markdown">yes but by design they cannot be simple and small</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            chess maybe an easy game to explain
+                            <span class="markdown">chess maybe an easy game to explain</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            but its mechanics are very very indepth
+                            <span class="markdown">but its mechanics are very very indepth</span>
 
                         </div>
 
@@ -927,7 +954,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:06 PM</span>
 
                         <div class="chatlog__content">
-                            Yeah but in terms of programming its easy to program
+                            <span class="markdown">Yeah but in terms of programming its easy to program</span>
 
                         </div>
 
@@ -944,7 +971,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:06 PM</span>
 
                         <div class="chatlog__content">
-                            Maybe
+                            <span class="markdown">Maybe</span>
 
                         </div>
 
@@ -961,7 +988,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:07 PM</span>
 
                         <div class="chatlog__content">
-                            It has simple rules but complex playstyles
+                            <span class="markdown">It has simple rules but complex playstyles</span>
 
                         </div>
 
@@ -978,14 +1005,14 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:07 PM</span>
 
                         <div class="chatlog__content">
-                            Yeah that is an idea
+                            <span class="markdown">Yeah that is an idea</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            but there isn&#39;t a single mechanic in strategy games
+                            <span class="markdown">but there isn&#39;t a single mechanic in strategy games</span>
 
                         </div>
 
@@ -1002,7 +1029,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:08 PM</span>
 
                         <div class="chatlog__content">
-                            The brief doesnt say the genre has to have a singular mechanic, just that we need to replace <i>a</i> mechanic
+                            <span class="markdown">The brief doesnt say the genre has to have a singular mechanic, just that we need to replace <em>a</em> mechanic</span>
 
                                 <span class="chatlog__edited-timestamp" title="02-Feb-19 12:08 PM">(edited)</span>
                         </div>
@@ -1020,42 +1047,42 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 12:11 PM</span>
 
                         <div class="chatlog__content">
-                            Hmm
+                            <span class="markdown">Hmm</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            maybe we could do something with the rts but remove the ability to command individual units and instead do it through a long chain of commands.
+                            <span class="markdown">maybe we could do something with the rts but remove the ability to command individual units and instead do it through a long chain of commands.</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            maybe an rts where you are both the co and the messenger boy
+                            <span class="markdown">maybe an rts where you are both the co and the messenger boy</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            that removes the ability to reorganise their plans instantaneously and instead have to ensure that the chain of command is stable
+                            <span class="markdown">that removes the ability to reorganise their plans instantaneously and instead have to ensure that the chain of command is stable</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            blooming heck that would be an evil game
+                            <span class="markdown">blooming heck that would be an evil game</span>
 
                         </div>
 
 
 
                         <div class="chatlog__content">
-                            cour
+                            <span class="markdown">cour</span>
 
                         </div>
 
@@ -1072,7 +1099,7 @@ a {
                 <span class="chatlog__timestamp">02-Feb-19 05:16 PM</span>
 
                         <div class="chatlog__content">
-                            Anyone had any more ideas?
+                            <span class="markdown">Anyone had any more ideas?</span>
 
                         </div>
 
@@ -1089,14 +1116,14 @@ a {
                 <span class="chatlog__timestamp">04-Feb-19 05:58 PM</span>
 
                         <div class="chatlog__content">
-                            I put it somehow together. You can add whatever you want/ share some more opinions etc. &#128515;
+                            <span class="markdown">I put it somehow together. You can add whatever you want/ share some more opinions etc. <img class="emoji " alt="😃" title="😃" src="https://twemoji.maxcdn.com/2/72x72/1f603.png" /></span>
 
                         </div>
 
                         <div class="chatlog__attachment">
                             <a href="https://cdn.discordapp.com/attachments/540274089638756353/542041277185785859/IDEAS.docx">
                                 
-                                    Attachment: IDEAS.docx (13.8 KB)
+                                    Attachment: IDEAS.docx (13.82 KB)
                             </a>
                         </div>
 
@@ -1112,7 +1139,7 @@ a {
                 <span class="chatlog__timestamp">20-Feb-19 08:29 AM</span>
 
                         <div class="chatlog__content">
-                            Morning <span class="mention">@everyone</span> I have sent an email about my absence to Rob. I do apologise for the irritation this may occur. If there is anything that needs to be asked about please contact me on here...<i>It&#39;s not like I can go anywhere</i>
+                            <span class="markdown">Morning <span class="mention">@everyone</span> I have sent an email about my absence to Rob. I do apologise for the irritation this may occur. If there is anything that needs to be asked about please contact me on here...<em>It&#39;s not like I can go anywhere</em></span>
 
                         </div>
 
